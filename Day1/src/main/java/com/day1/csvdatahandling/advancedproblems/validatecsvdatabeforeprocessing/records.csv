@@ -1,0 +1,5 @@
+ID,Name,Email,Phone
+1,John,john@example.com,9876543210
+2,Alice,alice@wrong-email,12345678
+3,Bob,bob@example.com,987654321A
+4,Eve,eve@example.com,8765432109

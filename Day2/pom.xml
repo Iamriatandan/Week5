@@ -1,33 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<dependencies>
+    <!-- Jackson Databind for JSON parsing -->
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.16.0</version>
+    </dependency>
 
-    <groupId>com.day2</groupId>
-    <artifactId>Day2</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!-- JSON Schema Validator -->
+    <dependency>
+        <groupId>com.github.java-json-tools</groupId>
+        <artifactId>json-schema-validator</artifactId>
+        <version>2.2.14</version>
+    </dependency>
 
-    <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
+    <!-- JSON Schema Core -->
+    <dependency>
+        <groupId>com.github.java-json-tools</groupId>
+        <artifactId>json-schema-core</artifactId>
+        <version>1.2.14</version>
+    </dependency>
 
-    <dependencies>
-        <!-- Corrected JSON Dependency -->
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20231013</version>  <!-- Use a valid version -->
-        </dependency>
+    <!-- Jackson JSON Loader -->
+    <dependency>
+        <groupId>com.github.fge</groupId>
+        <artifactId>jackson-coreutils</artifactId>
+        <version>1.9</version>
+    </dependency>
+    <dependency>
+        <groupId>com.github.java-json-tools</groupId>
+        <artifactId>json-schema-validator</artifactId>
+        <version>2.2.14</version>
+    </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.16.0</version>  <!-- Use the latest version -->
-        </dependency>
-
-
-    </dependencies>
-</project>
+</dependencies>

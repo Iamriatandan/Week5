@@ -1,0 +1,6 @@
+EmployeeID,Name,Department,Salary,Email
+101,Alice,HR,50000,alice@example.com
+102,Bob,IT,70000,bob@example.com
+103,Charlie,Finance,60000,charlie@example.com
+104,David,Marketing,55000,david@example.com
+105,Eve,Operations,75000,eve@example.com

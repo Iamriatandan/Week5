@@ -29,7 +29,7 @@ public class LargeCsvFile {
                 // If batch of 100 is completed
                 if (count % batchSize == 0) {
                     batchCount++;
-                    System.out.println("✅ Processed " + count + " records so far...");
+                    System.out.println("Processed " + count + " records so far...");
                 }
             }
 

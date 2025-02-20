@@ -7,7 +7,7 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.File;
 import java.io.IOException;
 
-public class JsonToXmlConverter {
+public class JSONToXmlConverter {
     public static void main(String[] args) throws IOException {
         ObjectMapper jsonMapper = new ObjectMapper();
         XmlMapper xmlMapper = new XmlMapper();

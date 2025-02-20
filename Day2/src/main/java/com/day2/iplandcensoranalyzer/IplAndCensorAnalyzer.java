@@ -9,7 +9,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class IPLAndCensorAnalyzer {
+public class IplAndCensorAnalyzer {
     public static void main(String[] args) throws IOException {
         String jsonInputFile = "C:\\Users\\tanda\\OneDrive\\Documents\\Desktop\\Training\\Week5\\Day2\\src\\main\\java\\com\\day2\\iplandcensoranalyzer\\ipldata.json";
         String csvInputFile = "C:\\Users\\tanda\\OneDrive\\Documents\\Desktop\\Training\\Week5\\Day2\\src\\main\\java\\com\\day2\\iplandcensoranalyzer\\ipldata.json";

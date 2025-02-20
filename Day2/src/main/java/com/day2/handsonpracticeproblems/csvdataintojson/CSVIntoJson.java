@@ -2,36 +2,35 @@ package com.day2.handsonpracticeproblems.csvdataintojson;
 
 import com.fasterxml.jackson.databind.MappingIterator;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import com.fasterxml.jackson.dataformat.csv.CsvMapper;
 import com.fasterxml.jackson.dataformat.csv.CsvSchema;
-
 import java.io.File;
-import java.io.IOException;
 import java.util.List;
-import java.util.Map;
 
 public class CSVIntoJson {
-    public static void main(String[] args) throws IOException {
-        File csvFile = new File("data.csv");
+    public static void main(String[] args) {
+        try {
+            // Create CSV Mapper and Schema (with auto-detection of columns)
+            CsvMapper csvMapper = new CsvMapper();
+            CsvSchema schema = CsvSchema.emptySchema().withHeader();
 
-        // Define CSV Schema (Auto-detects headers)
-        CsvSchema schema = CsvSchema.emptySchema().withHeader();
+            // Read CSV File
+            File csvFile = new File("C:\\Users\\tanda\\OneDrive\\Documents\\Desktop\\Training\\Week5\\Day2\\src\\main\\java\\com\\day2\\handsonpracticeproblems\\csvdataintojson\\data.csv");
+            MappingIterator<Object> iterator = csvMapper.readerFor(Object.class).with(schema).readValues(csvFile);
 
-        // Create CsvMapper
-        CsvMapper csvMapper = new CsvMapper();
+            // Convert to List of JSON Objects
+            List<Object> list = iterator.readAll();
 
-        // Read CSV into List of Maps
-        MappingIterator<Map<String, String>> it = csvMapper.readerFor(Map.class)
-                .with(schema)
-                .readValues(csvFile);
+            // Convert List to JSON
+            ObjectMapper jsonMapper = new ObjectMapper();
+            String json = jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(list);
 
-        List<Map<String, String>> jsonList = it.readAll();
+            // Print JSON Output
+            System.out.println(json);
 
-        // Convert to JSON
-        ObjectMapper jsonMapper = new ObjectMapper();
-        String json = jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(jsonList);
-
-        // Print JSON Output
-        System.out.println(json);
+        } catch (Exception e) {
+            System.out.println("Error during accessing file.");
+        }
     }
 }
